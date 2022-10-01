@@ -5,10 +5,18 @@ int main()
 {
     int n;
     srand((unsigned)time(NULL));
-    n = rand() % 6 + 1;
+    n = rand() % 100 + 1;
     printf("数値：%d\n", n);
-    if (n >= 3)
+    if (n % 2 == 0 && n % 3 == 0)
     {
-        printf("3以上です。");
+        printf("2と3の公倍数です。");
+    }
+    else if (n % 2 == 0)
+    {
+        printf("2の倍数です。");
+    }
+    else if (n % 3 == 0)
+    {
+        printf("3の倍数です。");
     }
 }
