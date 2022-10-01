@@ -4,19 +4,23 @@
 int main()
 {
     int n;
-    srand((unsigned)time(NULL));
-    n = rand() % 100 + 1;
-    printf("数値：%d\n", n);
-    if (n % 2 == 0 && n % 3 == 0)
+    printf("年数を入力してください：");
+    //  キーボードから整数を入力
+    scanf("%d", &n);
+    if (n % 400 == 0)
     {
-        printf("2と3の公倍数です。");
+        printf("閏年です");
     }
-    else if (n % 2 == 0)
+    else if (n % 100 == 0)
     {
-        printf("2の倍数です。");
+        printf("閏年ではありません");
     }
-    else if (n % 3 == 0)
+    else if (n % 4 == 0)
     {
-        printf("3の倍数です。");
+        printf("閏年です");
+    }
+    else
+    {
+        printf("閏年ではありません");
     }
 }
